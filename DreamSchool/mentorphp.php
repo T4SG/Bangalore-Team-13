@@ -23,7 +23,3 @@ if(mysqli_query($con,$query))
 else
 	echo(mysqli_error($con));
 ?>
-
-
-
-
