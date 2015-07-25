@@ -1,0 +1,45 @@
+<?php
+
+$name=$_POST['name'];
+
+$middlelname=$_POST['middlename'];
+
+$middlelname=$_POST['middlename'];
+$middlelname=$_POST['middlename'];
+$middlelname=$_POST['middlename'];
+$middlelname=$_POST['middlename'];
+
+
+$middlelname=$_POST['middlename'];
+
+
+
+
+$con=mysql_connect("localhost","root","");
+
+
+if(!$con)
+
+echo "error";
+
+
+$query=sprintf("INSERT INTO dfs.mentor VALUES('%s','%s')",mysql_real_escape_string($name),mysql_real_escape_string($id));
+
+
+
+mysql_query($query,$con);
+
+
+
+echo "successfully registered";
+
+
+
+
+
+
+?>
+
+
+
+
