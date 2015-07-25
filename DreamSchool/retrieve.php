@@ -5,15 +5,19 @@ $con=mysqli_connect("localhost","root","","dfs");
 if(!$con)
 	echo "Connectivity Error";
 
-$query  = "SELECT * FROM mentor";
+$query  = "SELECT * FROM mentor where email = 'keshav2509@gmail.com'";
 $result = mysqli_query($con,$query);
 
+$output = "";
 while($row = mysqli_fetch_array($result, MYSQL_ASSOC))
  {
-     echo "Name :{$row['name']} <br>" .
+		$output= "Name :{$row['name']} <br>" .
           "City : {$row['city']} <br>" . 
-          "email : {$row['email']} <br><br>";
+          "Email : {$row['email']} <br><br>" .
+		  "Telephone : {$row['tel']} <br><br>" .
+		  "Mobile : {$row['mobile']} <br><br>" .
+		  "postal Code : {$row['ptc']} <br><br>";
  } 
-
+ echo $output;
 
 ?>
