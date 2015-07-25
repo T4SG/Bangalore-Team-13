@@ -1,0 +1,10 @@
+CACHE MANIFEST
+# 2012-02-21 v1.0.0
+css/bootstrap.css
+js/jquery.min.js
+/logo.gif
+/main.js
+NETWORK:
+*
+FALLBACK:
+offline.html
