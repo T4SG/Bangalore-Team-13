@@ -1,28 +1,27 @@
 <?php
 
 $name=$_POST['firstname'];
-$middlelname=$_POST['middlename'];
+$middlename=$_POST['middlename'];
 $lastname=$_POST['lastname'];
 $email=$_POST['email'];
+$gender="Male";
+$language=$_POST['language'];
 $tel=$_POST['tel'];
 $mobile=$_POST['mobile'];
 $address=$_POST['add'];
-$postalcode=$POST['ptc'];
-$username=$POST['username'];
-$conpwd=$POST['con_pwd'];
+$ptc=$_POST['ptc'];
+$pwd=$_POST['pwd'];
 
-$con=mysql_connect("localhost","root","","dfs");
+$con=mysqli_connect("localhost","root","","dfs");
 
 if(!$con)
 	echo "Connectivity Error";
 
-$query="INSERT INTO mentor VALUES($name,$middlename,$lastname,$email,$gender,$language,$email,$tel,$mobile,$add,$ptc,$username,$pwd)";
-
-if(mysql_query($query,$con))
+$query="insert into mentor values ('$name','$middlename','$lastname','$gender','$language','$email','$tel','$mobile','$address','$ptc','$email','$pwd')";
+if(mysqli_query($con,$query))
 	echo("Success");
 else
-	echo("Failure");
-
+	echo(mysqli_error($con));
 ?>
 
 
