@@ -17,7 +17,7 @@ $con=mysqli_connect("localhost","root","","dfs");
 if(!$con)
 	echo "Connectivity Error";
 
-$query="insert into mentor(`firstname`, `middlename`, `lastname`, `gender`, `language`, `email`, `tel`, `mobile`, `add`, `ptc`, `username`, `pwd`) values ('$name','$middlename','$lastname','$gender','$language','$email','$tel','$mobile','$address','$ptc','$email','$pwd')";
+$query="insert into mentor(`firstname`, `middlename`, `lastname`, `gender`, `language`, `email`, `tel`, `mobile`, `addr`, `ptc`, `username`, `pwd`) values ('$name','$middlename','$lastname','$gender','$language','$email','$tel','$mobile','$address','$ptc','$email','$pwd')";
 if(mysqli_query($con,$query))
 	echo("Success");
 else
