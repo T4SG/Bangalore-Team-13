@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2015 at 08:42 PM
+-- Generation Time: Jul 25, 2015 at 09:36 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -30,19 +30,25 @@ CREATE TABLE IF NOT EXISTS `mentee` (
   `mid` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(15) NOT NULL,
   `fathername` varchar(15) NOT NULL,
-  `presentaddress` text NOT NULL,
-  `sex` varchar(20) NOT NULL,
+  `sex` varchar(6) NOT NULL,
   `city` varchar(20) NOT NULL,
   `state` varchar(20) NOT NULL,
-  `pincode` varchar(20) NOT NULL,
+  `pincode` varchar(6) NOT NULL,
   `emailid` varchar(30) NOT NULL,
   `dob` date NOT NULL,
-  `mobileno` int(20) NOT NULL,
+  `mobileno` int(10) NOT NULL,
   `username` varchar(20) NOT NULL,
   `pwd` varchar(20) NOT NULL,
   PRIMARY KEY (`mid`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `mentee`
+--
+
+INSERT INTO `mentee` (`mid`, `name`, `fathername`, `sex`, `city`, `state`, `pincode`, `emailid`, `dob`, `mobileno`, `username`, `pwd`) VALUES
+(1, 'Ankur Kishore', 'Random Kishore', 'male', 'Mumbai', 'Goa', '560098', 'asd@asd.com', '1992-08-12', 2147483647, 'asd@asd.com', '123');
 
 -- --------------------------------------------------------
 
@@ -52,15 +58,13 @@ CREATE TABLE IF NOT EXISTS `mentee` (
 
 CREATE TABLE IF NOT EXISTS `mentor` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `firstname` varchar(20) NOT NULL,
-  `middlename` varchar(20) NOT NULL,
-  `lastname` varchar(20) NOT NULL,
+  `name` varchar(20) NOT NULL,
   `gender` varchar(20) NOT NULL,
   `language` varchar(20) NOT NULL,
   `email` varchar(20) NOT NULL,
   `tel` int(20) NOT NULL,
   `mobile` int(20) NOT NULL,
-  `addr` text NOT NULL,
+  `city` text NOT NULL,
   `ptc` varchar(20) NOT NULL,
   `username` varchar(20) NOT NULL,
   `pwd` text NOT NULL,
@@ -72,8 +76,8 @@ CREATE TABLE IF NOT EXISTS `mentor` (
 -- Dumping data for table `mentor`
 --
 
-INSERT INTO `mentor` (`id`, `firstname`, `middlename`, `lastname`, `gender`, `language`, `email`, `tel`, `mobile`, `addr`, `ptc`, `username`, `pwd`) VALUES
-(1, 'Keshav', 'Prateek', 'Pandey', 'Male', 'English', 'keshav2509@gmail.com', 9999, 9, 'ADsdff', '560098', 'keshav2509@gmail.com', '123');
+INSERT INTO `mentor` (`id`, `name`, `gender`, `language`, `email`, `tel`, `mobile`, `city`, `ptc`, `username`, `pwd`) VALUES
+(1, 'Keshav', 'Male', 'English', 'keshav2509@gmail.com', 9999, 9, 'ADsdff', '560098', 'keshav2509@gmail.com', '123');
 
 -- --------------------------------------------------------
 

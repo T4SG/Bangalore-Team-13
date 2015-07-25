@@ -20,4 +20,3 @@ else
   echo "Failure:".mysqli_error($con);
 
 ?>
-
