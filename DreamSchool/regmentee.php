@@ -1,35 +1,23 @@
 <?php
-
-$sname=$_POST['name'];
+$name=$_POST['name'];
 $father=$_POST['fathername'];
-$address=$_POST['presentaddress'];
 $gender=$_POST['sex'];
-$hometown=$_POST['city'];
-$s=$_POST['state'];
+$city=$_POST['City'];
+$state=$_POST['State'];
 $pin=$_POST['pincode'];
 $email=$_POST['emailid'];
-$dateofbirth=$_POST['dob'];
+$dob=$_POST['dob'];
 $mobile=$_POST['mobileno'];
+$pwd=$_POST['pwd'];
 
-$con=mysql_connect("localhost","root","");
+$con=mysqli_connect("localhost","root","","dfs");
 
+$query="INSERT INTO `mentee`(`name`, `fathername`, `sex`, `city`, `state`, `pincode`, `emailid`, `dob`, `mobileno`, `username`, `pwd`) VALUES ('$name','$father','$gender','$city','$state','$pin','$email','$dob','$mobile','$email','$pwd')";
 
-$query=sprintf("INSERT INTO mentee VALUES('%s','%s','%s','%s','%s','%s','%s','%s',,yyyy/mm/dd','%d')",($sname),($father),($address),($gender),($hometown),($s),($pin),($email),($dateofbirth),($mobile));
-
-
-
-mysql_query($query,$con);
-
-
-
-
-
-
-
-
-
-
-echo "successfully registered";
+if(mysqli_query($con,$query))
+  echo "Successfully registered";
+else
+  echo "Failure:".mysqli_error($con);
 
 ?>
 
