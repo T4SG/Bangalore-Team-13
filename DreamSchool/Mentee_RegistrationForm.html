@@ -3,6 +3,12 @@
 <script>
 function validate()
 { 
+if( document.StudentRegistration.menteeid.value == "" )
+   {
+     alert( "Please provide your Mentee ID!" );
+     document.StudentRegistration.menteeid.focus() ;
+     return false;
+   }
    if( document.StudentRegistration.textnames.value == "" )
    {
      alert( "Please provide your Name!" );
@@ -103,7 +109,10 @@ cellspacing="2">
 <center><font size=4><b>Student Registration Form</b></font></center>
 </td>
 </tr>
-
+<tr>
+<td>Mentee ID:</td>
+<td><input type="text" name="menteeid" id="mentee_id" size="30"></td>
+</tr>
 <tr>
 <td>Name</td>
 <td><input type=text name=textnames id="textname" size="30"></td>
