@@ -23,6 +23,7 @@ $con=mysql_connect("localhost","root","");
 
 if(!$con)
 
+<<<<<<< HEAD:mentorphp.php
 echo "error";
 
 
@@ -41,6 +42,13 @@ echo "successfully registered";
 
 
 
+=======
+$query="insert into mentor(`firstname`, `middlename`, `lastname`, `gender`, `language`, `email`, `tel`, `mobile`, `add`, `ptc`, `username`, `pwd`) values ('$name','$middlename','$lastname','$gender','$language','$email','$tel','$mobile','$address','$ptc','$email','$pwd')";
+if(mysqli_query($con,$query))
+	echo("Success");
+else
+	echo(mysqli_error($con));
+>>>>>>> origin/master:DreamSchool/mentorphp.php
 ?>
 
 
