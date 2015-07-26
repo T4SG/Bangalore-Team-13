@@ -1,10 +1,10 @@
 <?php
 
 $host="localhost"; // Host name 
-$username=""; // Mysql username 
+$username="root"; // Mysql username 
 $password=""; // Mysql password 
 $db_name="test"; // Database name 
-$tbl_name="dsf"; // Table name 
+$tbl_name="dfs"; // Table name 
 
 // Connect to server and select databse.
 mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
