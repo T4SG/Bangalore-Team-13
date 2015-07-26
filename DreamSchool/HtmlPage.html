@@ -14,6 +14,11 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/Data.js"></script>
+    <!-- Charts-->
+    <script src="http://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="http://www.amcharts.com/lib/3/pie.js"></script>
+    <script src="http://www.amcharts.com/lib/3/themes/light.js"></script>
+
 </head>
 <body>
     <script>
@@ -50,6 +55,30 @@
         }
         alert("You have been matched with " + name);
     </script>
+    <div id="chartdiv" style="width: 640px; height: 400px;"></>hello</div>	
+    <script>
+        alert("here");
+        var chart = AmCharts.makeChart("chartdiv", {
+            "type": "pie",
+            "theme": "light",
+            "dataProvider": [{
+                "title": "New",
+                "value": 4852
+            }, {
+                "title": "Returning",
+                "value": 9899
+            }],
+            "titleField": "title",
+            "valueField": "value",
+            "labelRadius": 5,
 
+            "radius": "42%",
+            "innerRadius": "60%",
+            "labelText": "[[title]]",
+            "export": {
+                "enabled": true
+            }
+        });
+    </script>							
 </body>
 </html>

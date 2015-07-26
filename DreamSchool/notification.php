@@ -4,7 +4,7 @@ $post_data = array(
     // 'From' doesn't matter; For transactional, this will be replaced with your SenderId;
     // For promotional, this will be ignored by the SMS gateway
     'From'   => '8808891988',
-    'To'    => '7416445557',
+    'To'    => '9743405748',
     'Body'  => '7416445557 A meeting has been scheduled for today.', //Incase you are wondering who Dr. Rajasekhar is http://en.wikipedia.org/wiki/Dr._Rajasekhar_(actor)
 );
  

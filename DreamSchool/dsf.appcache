@@ -4,6 +4,13 @@ css/bootstrap.css
 js/jquery.min.js
 /logo.gif
 /main.js
+/images/basic/Picture1.jpg
+/images/basic/8.jpg
+/images/basic/1.jpg
+http://www.amcharts.com/lib/3/amcharts.js
+http://www.amcharts.com/lib/3/pie.js
+http://www.amcharts.com/lib/3/themes/light.js
+
 NETWORK:
 *
 FALLBACK:

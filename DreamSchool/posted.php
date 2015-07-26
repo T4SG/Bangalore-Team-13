@@ -13,7 +13,7 @@ if(!$con)
 echo "error";
 
 
-$query=sprintf("INSERT INTO dfs.post VALUES('%s')",mysql_real_escape_string($post));
+$query=sprintf("INSERT INTO dfs.mentor VALUES('%s')",mysql_real_escape_string($post));
 
 
 

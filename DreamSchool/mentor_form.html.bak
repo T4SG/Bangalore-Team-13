@@ -1,6 +1,6 @@
 <center>Personal Information</center>
 <html>
-<body bgcolor="lightgreen">
+<body>
  
 	<form tag="Create Logon" action="mentorphp.php" method="POST">
 		<div align="center">

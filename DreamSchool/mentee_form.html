@@ -1,8 +1,15 @@
+
 <html>
 <head>
 <script>
 function validate()
 { 
+if( document.StudentRegistration.menteeid.value == "" )
+   {
+     alert( "Please provide your Mentee ID!" );
+     document.StudentRegistration.menteeid.focus() ;
+     return false;
+   }
    if( document.StudentRegistration.textnames.value == "" )
    {
      alert( "Please provide your Name!" );
@@ -15,10 +22,41 @@ function validate()
      document.StudentRegistration.fathername.focus() ;
      return false;
    }
+   
+   if( document.StudentRegistration.paddress.value == "" )
+   {
+     alert( "Please provide your Postal Address!" );
+     document.StudentRegistration.paddress.focus() ;
+     return false;
+   }
+   if( document.StudentRegistration.personaladdress.value == "" )
+   {
+     alert( "Please provide your Personal Address!" );
+     document.StudentRegistration.personaladdress.focus() ;
+     return false;
+   }
    if ( ( StudentRegistration.sex[0].checked == false ) && ( StudentRegistration.sex[1].checked == false ) )
    {
    alert ( "Please choose your Gender: Male or Female" );
    return false;
+   }   
+   if( document.StudentRegistration.City.value == "-1" )
+   {
+     alert( "Please provide your City!" );
+     document.StudentRegistration.City.focus() ;
+     return false;
+   }   
+   if( document.StudentRegistration.Course.value == "-1" )
+   {
+     alert( "Please provide your Course!" );
+    
+     return false;
+   }   
+   if( document.StudentRegistration.District.value == "-1" )
+   {
+     alert( "Please provide your Select District!" );
+    
+     return false;
    }   
    if( document.StudentRegistration.State.value == "-1" )
    {
@@ -62,9 +100,9 @@ function validate()
 </script>
 </head>
 <body>
-<form action="regmentee.php" method="POST" name="StudentRegistration" onsubmit="return(validate());">
+<form action="#" name="StudentRegistration" onsubmit="return(validate());">
 
-<table cellpadding="2" width="20%"  align="center"
+<table cellpadding="2" width="20%" bgcolor="99FFFF" align="center"
 cellspacing="2">
 
 <tr>
@@ -73,15 +111,29 @@ cellspacing="2">
 </td>
 </tr>
 <tr>
+<td>Mentee ID:</td>
+<td><input type="text" name="menteeid" id="mentee_id" size="30"></td>
+</tr>
+<tr>
 <td>Name</td>
-<td><input type="text" name="name" id="textname" size="30"></td>
+<td><input type=text name=textnames id="textname" size="30"></td>
 </tr>
 
 <tr>
-<td>Father's Name</td>
-<td><input type="text" name="fathername" id="fathername" size="30"></td>
+<td>Father Name</td>
+<td><input type="text" name="fathername" id="fathername"
+size="30"></td>
 </tr>
 <tr>
+<td>Postal Address</td>
+<td><input type="text" name="paddress" id="paddress" size="30"></td>
+</tr>
+
+<tr>
+<td>Personal Address</td>
+<td><input type="text" name="personaladdress"
+id="personaladdress" size="30"></td>
+</tr>
 
 <tr>
 <td>Sex</td>
@@ -101,6 +153,29 @@ cellspacing="2">
 </tr>
 
 <tr>
+<td>Course</td>
+<td><select name="Course">
+<option value="-1" selected>select..</option>
+<option value="B.Tech">B.TECH</option>
+<option value="MCA">MCA</option>
+<option value="MBA">MBA</option>
+<option value="BCA">BCA</option>
+</select></td>
+</tr>
+
+<tr>
+<td>District</td>
+<td><select name="District">
+<option value="-1" selected>select..</option>
+<option value="Nalanda">NALANDA</option>
+<option value="UP">UP</option>
+<option value="Goa">GOA</option>
+<option value="Patna">PATNA</option>
+</select></td>
+
+</tr>
+
+<tr>
 <td>State</td>
 <td><select Name="State">
 <option value="-1" selected>select..</option>
@@ -110,7 +185,6 @@ cellspacing="2">
 <option value="Bihar">BIHAR</option>
 </select></td>
 </tr>
-
 <tr>
 <td>PinCode</td>
 <td><input type="text" name="pincode" id="pincode" size="30"></td>
@@ -122,22 +196,17 @@ cellspacing="2">
 </tr>
 
 <tr>
-    <td>Password</td>
-    <td><input type="password" name="pwd" /></td>
-</tr>
-
-<tr>
 <td>DOB</td>
 <td><input type="text" name="dob" id="dob" size="30"></td>
 </tr>
 
 <tr>
-<td>Mobile No</td>
+<td>MobileNo</td>
 <td><input type="text" name="mobileno" id="mobileno" size="30"></td>
 </tr>
 <tr>
 <td><input type="reset"></td>
-<td colspan="2"><input type="submit" value="Register" /></td>
+<td colspan="2"><input type="submit" value="Submit Form" /></td>
 </tr>
 </table>
 </form>
