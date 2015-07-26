@@ -18,23 +18,37 @@
 <body>
     <script>
         if (localStorage.keshav == undefined)
+        {
             localStorage.keshav = "Hello Keshav"
+            localStorage.gender = "Male"
+        }
         else
             alert(localStorage.keshav)
+        if (localStorage.reqskill!=undefined)
+            var reqskill = localStorage.reqskill
+        else
+            var reqskill = "Personal Skills"
+        var matchname = ""
         for (var i in mentors.mentors)
         {
-            //alert();
             var name = mentors.mentors[i].name;
+            var gender = mentors.mentors[i].gender;
             var skill = "<br>Skills for " + name+"<br>";
             var s1 = mentors.mentors[i].skills.split(";");
             for (j in s1) {
                 var s2 = s1[j].split(":");
                 var skilldis = s2[0];
                 var skills = s2[1].split(",");
-                skill+="<br>"+skilldis+":<br>"+skills
+                skill += "<br>" + skilldis + ":<br>" + skills
+                if ((skilldis==reqskill) && (localStorage.gender==gender)) {
+                    matchname = name;
+                    break;
+                }
             }
-            document.body.innerHTML+=skill
+            if (matchname != "")
+                break;
         }
+        alert("You have been matched with " + name);
     </script>
 
 </body>
