@@ -1,5 +1,5 @@
 <?php
-echo"sucess";
+echo"success";
 ?>
 
 <html>
